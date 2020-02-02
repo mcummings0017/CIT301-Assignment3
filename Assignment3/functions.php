@@ -12,13 +12,4 @@ function read($filename) {
 	fclose($handle);
 	return $temp;
 }
-
-function readCSV($filename) {
-	$handle=fopen($filename,'r');
-	$temp=[];
-	while(!feof($handle)) $temp[]=explode(';',fgets($handle));
-	fclose($handle);
-	return $temp;
-}
-
 ?>
